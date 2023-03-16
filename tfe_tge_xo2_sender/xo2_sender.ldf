@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="tsn_tfe" device="LCMXO2-4000HC-6FTG256C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="xo2_sender_top"/>
+        <Source name="impl1/source/xo2_sender_top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="xo2_sender_top"/>
+        </Source>
+        <Source name="../core/rom_1k_8bit.mem" type="Unknown Type" type_short="Unknown">
+            <Options/>
+        </Source>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="xo2_sender.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="tsn_tfe1.sty"/>
+</BaliProject>

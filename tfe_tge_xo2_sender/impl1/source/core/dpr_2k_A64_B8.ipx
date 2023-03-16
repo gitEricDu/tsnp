@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="dpr_2k_A64_B8" module="RAM_DP_TRUE" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2022 02 17 08:28:25.890" version="7.5" type="Module" synthesis="synplify" source_format="Verilog">
+  <Package>
+		<File name="" type="" modified="2022 02 17 08:28:25.890"/>
+		<File name="dpr_2k_A64_B8.lpc" type="lpc" modified="2022 02 17 08:28:20.241"/>
+		<File name="dpr_2k_A64_B8.v" type="top_level_verilog" modified="2022 02 17 08:28:20.304"/>
+		<File name="dpr_2k_A64_B8_tmpl.v" type="template_verilog" modified="2022 02 17 08:28:20.319"/>
+		<File name="tb_dpr_2k_A64_B8_tmpl.v" type="testbench_verilog" modified="2022 02 17 08:28:20.335"/>
+  </Package>
+</DiamondModule>

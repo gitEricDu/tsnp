@@ -1,0 +1,121 @@
+VOLTAGE 2.500 V;
+TEMPERATURE 85.000 C;
+SYSCONFIG JTAG_PORT=DISABLE MUX_CONFIGURATION_PORTS=ENABLE ;
+// 系统信号接口
+LOCATE COMP "sysclk" SITE "T7" ;
+LOCATE COMP "nrst" SITE "M15" ;
+//LOCATE COMP "pg_1v0" SITE "P16" ;
+//LOCATE COMP "pg_3v3" SITE "R16" ;
+FREQUENCY PORT "sysclk" 125.000000 MHz ;
+IOBUF PORT "nrst" PULLMODE=UP IO_TYPE=LVCMOS25 ;
+// 8522 接口
+LOCATE COMP "RxClkA" SITE "C8" ;
+LOCATE COMP "RxClkB" SITE "E2" ;
+LOCATE COMP "RxCtlA" SITE "A11" ;
+LOCATE COMP "RxCtlB" SITE "F1" ;
+LOCATE COMP "RxDA[0]" SITE "D7" ;
+LOCATE COMP "RxDA[1]" SITE "D6" ;
+LOCATE COMP "RxDA[2]" SITE "C7" ;
+LOCATE COMP "RxDA[3]" SITE "B7" ;
+LOCATE COMP "RxDB[0]" SITE "G2" ;
+LOCATE COMP "RxDB[1]" SITE "G3" ;
+LOCATE COMP "RxDB[2]" SITE "F2" ;
+LOCATE COMP "RxDB[3]" SITE "F3" ;
+LOCATE COMP "linkA" SITE "H2" ;
+LOCATE COMP "linkB" SITE "G1" ;
+//LOCATE COMP "rclk1" SITE "T9" ;		// 当前没有用到
+//LOCATE COMP "rclk2" SITE "N9" ;		// 当前没有用到
+LOCATE COMP "TxClkA" SITE "C5" ;
+LOCATE COMP "TxClkB" SITE "E1" ;
+LOCATE COMP "TxCtlA" SITE "B5" ;
+LOCATE COMP "TxCtlB" SITE "D1" ;
+LOCATE COMP "TxDA[0]" SITE "A5" ;
+LOCATE COMP "TxDA[1]" SITE "A3" ;
+LOCATE COMP "TxDA[2]" SITE "B4" ;
+LOCATE COMP "TxDA[3]" SITE "A4" ;
+LOCATE COMP "TxDB[0]" SITE "D2" ;
+LOCATE COMP "TxDB[1]" SITE "C1" ;
+LOCATE COMP "TxDB[2]" SITE "C2" ;
+LOCATE COMP "TxDB[3]" SITE "B1" ;
+LOCATE COMP "mck" SITE "E6" ;
+LOCATE COMP "mdio" SITE "C4" ;
+LOCATE COMP "nphy_rst" SITE "F5" ;
+LOCATE COMP "phy_clk" SITE "L2" ;
+IOBUF PORT "phy_clk" IO_TYPE=LVCMOS25D ;
+FREQUENCY PORT "RxClkA" 125.000000 MHz ;
+FREQUENCY PORT "RxClkB" 125.000000 MHz ;
+// IIS-DAC 专用接口
+//LOCATE COMP "clk49" SITE "J1" ;
+//LOCATE COMP "lrclk" SITE "H5" ;
+//LOCATE COMP "bclk" SITE "H1" ;
+//LOCATE COMP "clk12m" SITE "H3" ;
+//LOCATE COMP "sdo[0]" SITE "H4" ;
+// 通用接口 J5（远离核心板侧）
+//LOCATE COMP "s_clk12m" SITE "T10" ;	// 11
+//LOCATE COMP "s_lrclk" SITE "R10" ;	// 9
+//LOCATE COMP "s_bclk" SITE "R5" ;		// 7
+//LOCATE COMP "sdi[0]" SITE "P6" ;		// 5
+//LOCATE COMP "sdi[1]" SITE "T6" ;		// 3
+//LOCATE COMP "sdo[1]" SITE "P13" ;		// 1
+//J5（远离核心板侧）
+LOCATE COMP "exSync" SITE "T10" ;	// 11
+//LOCATE COMP "s_lrclk" SITE "R10" ;	// 9
+//LOCATE COMP "s_bclk" SITE "R5" ;		// 7
+//LOCATE COMP "sdi[0]" SITE "P6" ;		// 5
+//LOCATE COMP "sdi[1]" SITE "T6" ;		// 3
+//LOCATE COMP "sdo[1]" SITE "P13" ;		// 1
+
+//  测试  J5（近核心板侧）
+LOCATE COMP "tsto[0]" SITE "K5" ;// 2
+LOCATE COMP "tsto[1]" SITE "L5" ;// 4
+LOCATE COMP "tsto[2]" SITE "M3" ;// 6
+LOCATE COMP "tsto[3]" SITE "N3" ;// 8
+LOCATE COMP "tsto[4]" SITE "K4" ;// 10
+LOCATE COMP "tsto[5]" SITE "K3" ;// 12
+// misc
+LOCATE COMP "led_d13" SITE "P4" ;
+LOCATE COMP "led_d14" SITE "R4" ;
+LOCATE COMP "led_d15" SITE "T2" ;
+LOCATE COMP "led_alm" SITE "J15" ;
+LOCATE COMP "led_run" SITE "J16" ;
+LOCATE COMP "sfp0_led" SITE "L15" ;
+LOCATE COMP "sfp1_led" SITE "K16" ;
+//LOCATE COMP "sfp_insert[0]" SITE "N16" ;		// 当前没有用到
+//LOCATE COMP "sfp_insert[1]" SITE "M16" ;		// 当前没有用到
+// 数码管显示控制接口
+LOCATE COMP "tst_latch" SITE "T3" ;
+LOCATE COMP "tst_sclk" SITE "T4" ;
+LOCATE COMP "tst_sdo" SITE "T5" ;
+IOBUF PORT "tst_sdo" IO_TYPE=LVCMOS25 DRIVE=8 ;
+IOBUF PORT "tst_sclk" IO_TYPE=LVCMOS25 DRIVE=8 ;
+// keyboard input
+LOCATE COMP "sw_load" SITE "R9" ;
+LOCATE COMP "sw_clk" SITE "T8" ;
+LOCATE COMP "sw_di" SITE "L4" ;
+// ADC7606
+//LOCATE COMP "adc_trg" SITE "N2" ;
+//LOCATE COMP "adc_Rst" SITE "P1" ;
+//LOCATE COMP "spi_nCs" SITE "P2" ;
+//LOCATE COMP "spi_di[1]" SITE "R1" ;
+//LOCATE COMP "spi_sclk" SITE "K2" ;
+//LOCATE COMP "spi_busy" SITE "L1" ;
+//LOCATE COMP "spi_di[0]" SITE "L3" ;
+
+// FE 
+FREQUENCY PORT "fe_rxClk" 25.000000 MHz ;
+FREQUENCY PORT "fe_txClk" 25.000000 MHz ;
+LOCATE COMP "fe_rxClk" SITE "H14" ;
+LOCATE COMP "fe_txClk" SITE "E15" ;
+LOCATE COMP "fe_rxDa[0]" SITE "G15" ;
+LOCATE COMP "fe_rxDa[1]" SITE "F16" ;
+LOCATE COMP "fe_rxDa[2]" SITE "F15" ;
+LOCATE COMP "fe_rxDa[3]" SITE "E16" ;
+LOCATE COMP "fe_rxDv" SITE "G16" ;
+LOCATE COMP "fe_txDa[0]" SITE "D15" ;
+LOCATE COMP "fe_txDa[1]" SITE "C16" ;
+LOCATE COMP "fe_txDa[2]" SITE "C15" ;
+LOCATE COMP "fe_txDa[3]" SITE "B16" ;
+LOCATE COMP "fe_txEn" SITE "D16" ;
+LOCATE COMP "fe_rst" SITE "J4" ;
+#IOBUF PORT "fe_rst" OPENDRAIN=ON ;
+#FREQUENCY NET "eddst_gmii_top.tfe.RX.crc_clk_reg_i" 12.500000 MHz ;
